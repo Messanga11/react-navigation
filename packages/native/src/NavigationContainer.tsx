@@ -131,6 +131,7 @@ function NavigationContainerInner(
       onStateChange?.(state);
     }
   );
+
   // Add additional linking related info to the ref
   // This will be used by the devtools
   React.useEffect(() => {
