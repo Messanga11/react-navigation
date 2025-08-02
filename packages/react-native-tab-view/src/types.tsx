@@ -1,4 +1,10 @@
-import type { Animated, StyleProp, TextStyle, ViewStyle } from 'react-native';
+import type {
+  Animated,
+  ColorValue,
+  StyleProp,
+  TextStyle,
+  ViewStyle,
+} from 'react-native';
 import type { PagerViewProps } from 'react-native-pager-view';
 
 export type TabDescriptor<T extends Route> = {
@@ -12,7 +18,7 @@ export type TabDescriptor<T extends Route> = {
     route: T;
     labelText?: string;
     focused: boolean;
-    color: string;
+    color: ColorValue;
     allowFontScaling?: boolean;
     style?: StyleProp<TextStyle>;
   }) => React.ReactNode;
@@ -20,7 +26,7 @@ export type TabDescriptor<T extends Route> = {
   icon?: (props: {
     route: T;
     focused: boolean;
-    color: string;
+    color: ColorValue;
     size: number;
   }) => React.ReactNode;
   badge?: (props: { route: T }) => React.ReactElement;

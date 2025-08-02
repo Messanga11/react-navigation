@@ -2,6 +2,7 @@ import { useTheme } from '@react-navigation/native';
 import * as React from 'react';
 import {
   Animated,
+  type ColorValue,
   Easing,
   type GestureResponderEvent,
   Platform,
@@ -12,14 +13,14 @@ import {
 } from 'react-native';
 
 type HoverEffectProps = {
-  color?: string;
+  color?: ColorValue;
   hoverOpacity?: number;
   activeOpacity?: number;
 };
 
 export type Props = Omit<PressableProps, 'style' | 'onPress'> & {
   href?: string;
-  pressColor?: string;
+  pressColor?: ColorValue;
   pressOpacity?: number;
   hoverEffect?: HoverEffectProps;
   style?: Animated.WithAnimatedValue<StyleProp<ViewStyle>>;

@@ -3,6 +3,7 @@ import Color from 'color';
 import * as React from 'react';
 import {
   Animated,
+  type ColorValue,
   Image,
   Platform,
   type StyleProp,
@@ -24,7 +25,7 @@ import { HeaderIcon } from './HeaderIcon';
 type Props = Omit<HeaderSearchBarOptions, 'ref'> & {
   visible: boolean;
   onClose: () => void;
-  tintColor?: string;
+  tintColor?: ColorValue;
   style?: Animated.WithAnimatedValue<StyleProp<ViewStyle>>;
 };
 

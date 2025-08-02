@@ -3,6 +3,7 @@ import { type Route, useTheme } from '@react-navigation/native';
 import Color from 'color';
 import React from 'react';
 import {
+  type ColorValue,
   type GestureResponderEvent,
   Platform,
   type StyleProp,
@@ -43,7 +44,7 @@ type Props = {
     | string
     | ((props: {
         focused: boolean;
-        color: string;
+        color: ColorValue;
         position: LabelPosition;
         children: string;
       }) => React.ReactNode);
@@ -53,7 +54,7 @@ type Props = {
   icon: (props: {
     focused: boolean;
     size: number;
-    color: string;
+    color: ColorValue;
   }) => React.ReactNode;
   /**
    * Text to show in a badge on the tab icon.
@@ -107,19 +108,19 @@ type Props = {
   /**
    * Color for the icon and label when the item is active.
    */
-  activeTintColor?: string;
+  activeTintColor?: ColorValue;
   /**
    * Color for the icon and label when the item is inactive.
    */
-  inactiveTintColor?: string;
+  inactiveTintColor?: ColorValue;
   /**
    * Background color for item when its active.
    */
-  activeBackgroundColor?: string;
+  activeBackgroundColor?: ColorValue;
   /**
    * Background color for item when its inactive.
    */
-  inactiveBackgroundColor?: string;
+  inactiveBackgroundColor?: ColorValue;
   /**
    * Whether to show the label text for the tab.
    */

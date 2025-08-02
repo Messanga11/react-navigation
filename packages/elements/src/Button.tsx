@@ -5,7 +5,7 @@ import {
 } from '@react-navigation/native';
 import Color from 'color';
 import * as React from 'react';
-import { Platform, StyleSheet } from 'react-native';
+import { type ColorValue, Platform, StyleSheet } from 'react-native';
 
 import {
   PlatformPressable,
@@ -15,7 +15,7 @@ import { Text } from './Text';
 
 type ButtonBaseProps = Omit<PlatformPressableProps, 'children'> & {
   variant?: 'plain' | 'tinted' | 'filled';
-  color?: string;
+  color?: ColorValue;
   children: string | string[];
 };
 
